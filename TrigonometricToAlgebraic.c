@@ -3,6 +3,9 @@
 #include <math.h>
 #include <time.h> //TODO: Use less libraries
 
+//Complex number converter: Trigonometric form to algebraic form
+//Version: 1.1b
+
 typedef struct algebraic_complex {
     float real;
     float imaginary;
@@ -38,8 +41,8 @@ int main(int argc, char** argv) {
     }
     else if(!strcmp("-f", argv[1])) {
         FILE *in_file, *out_file;
-        in_file = fopen(argv[2], "wb");
-        out_file = fopen(argv[3], "rb");
+        in_file = fopen(argv[2], "rb");
+        out_file = fopen(argv[3], "wb");
         do {
             fscanf(in_file, "%f", &modulus);
             fscanf(in_file, "%f", &argument);
